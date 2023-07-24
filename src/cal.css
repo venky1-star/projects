@@ -1,0 +1,44 @@
+.header{
+    background : black;
+    font-size: 30px;
+    height: 50px;
+}
+.heading{
+    font-style : italic;
+    color : aliceblue;
+    padding-right: 50px;
+}
+.table-div{
+    padding-top: 20px;
+}
+ table {
+     background : black;
+     border: 1px solid;
+ }
+ .td-div1{
+     background : white;
+     width : 30rem;
+     height : auto;
+     cursor : text;
+     text-align: right;
+     font-size: 30px;
+     overflow: hidden;
+     word-wrap: break-word;
+ }
+ .td-div2{
+     width : 5rem;
+     height : 42px;
+     background : red;
+     font-size: 25px;
+ }
+.td-div3{
+    background : black;
+    width : 30rem;
+    height : 45px;
+}
+.button{
+    width: 9.81rem;
+    height: 40px;
+    background: slateblue;
+    font-size: 25px;
+}
