@@ -1,0 +1,25 @@
+.form{
+    padding-left: 30%;
+}
+.tdLabel {
+    font-size: 40px;
+}
+.input{
+    font-size: 30px;
+    width : 160px;
+    height: 30px;
+}
+.select{
+    font-size: 30px;
+    width : 170px;
+    height : 30px;
+}
+.td{
+    padding-left: 20px;
+}
+
+.button{
+    font-size : 30px;
+    height : 40px;
+    width : 290px
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link rel="stylesheet" href="op.css">
+<div class="form"><form>
+    <table>
+        <tr>
+            <td class="tdLabel"><label for="input1" class="label">Enter Number 1 :</label></td>
+            <td class="td"><input class="input" type="number" name="number1" value="" id="input1" required/></td>
+        </tr>
+        <tr>
+            <td class="tdLabel"><label for="input2" class="label">Enter Number 2 :</label></td>
+            <td class="td"><input class="input" type="number" name="number2" id="input2" required/></td>
+        </tr>
+        <tr>
+            <td class="tdLabel"><label for="operation" class="label">Select Operation :</label></td>
+            <td class="td"><select class="select" name="operation" id="operation">
+                <option value="+">Addition</option>
+                <option value="-" >Subtraction</option>
+                <option value="*" >Multiplication</option>
+                <option value="%" >Modulus</option>
+                <option value="/" >Division</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="submit"><button class ="button" id="submit" type ="submit" value="submit">submit</button></td>
+        </tr>
+    </table>
+</form></div>
+<script>
+    const myKeyValues = window.location.search;
+    const urlParams = new URLSearchParams(myKeyValues);
+    let number1 = urlParams.get('number1').trim();
+    let number2 = urlParams.get('number2').trim();
+    const operand = urlParams.get('operation');
+    const result = eval(number1+operand+number2);
+    res = '<div style="padding-top:10px;padding-left: 30%">'
+    res += '<div style="font-size:30px;"><span style="color: brown">Result : ' +
+        '</span>'+number1+' '+operand+' '+number2 +' = '+ result +
+        '</div></div>'
+    document.getElementById("input1").value = number1;
+    document.getElementById("input2").value = number2;
+    document.write(res);
+</script>
+</body>
+</html>
