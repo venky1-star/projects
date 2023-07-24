@@ -12,7 +12,7 @@
         <tbody>
         <tr>
             <td>
-                <div class="td-div1" id = "display">0</div>
+                <div class="td-div1" id="display">0</div>
             </td>
             <td>
                 <button class="td-div2" onclick="cle()">C</button>
@@ -64,32 +64,36 @@
         </tr>
         </tbody>
     </table>
-    <div style="padding-top: 10px"><button style="width:100px"  id="cle-history" onclick="history();">Clear History</button></div>
+    <div style="padding-top: 10px">
+        <button style="width:100px" id="cle-history" onclick="history();">Clear History</button>
+    </div>
     <div style="font-size: 20px;" id="result"></div>
 </div>
 <script>
-    function pass(a){
+    function pass(a) {
         let doc = document.getElementById("display");
-        if(doc.textContent === "0"){
+        if (doc.textContent === "0") {
             doc.textContent = "";
         }
         doc.textContent += a;
     }
-    function cle(){
+
+    function cle() {
         document.getElementById("display").textContent = "0";
     }
-    function ans(){
+
+    function ans() {
         try {
             let res = eval(document.getElementById("display").textContent);
             document.getElementById("result").innerHTML += '<div>' + document.getElementById("display").textContent + "  =  " +
-               res + '</div>';
+                res + '</div>';
             document.getElementById("display").textContent = res;
-        }
-        catch(err) {
-            document.getElementById("result").innerHTML += '<div>'+err.message+'</div>';
+        } catch (err) {
+            document.getElementById("result").innerHTML += '<div>' + err.message + '</div>';
         }
     }
-    function history(){
+
+    function history() {
         document.getElementById("result").textContent = "";
     }
 </script>
